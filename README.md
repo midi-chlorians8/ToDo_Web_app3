@@ -1,33 +1,47 @@
-ToDo_Web_app3
-Description
-This project is a service that allows users to write notes about what they need to do.
+# ToDo_Web_app3
+## _This project is a service that allows users to write notes about what they need to do._
 
-Features
-User authentication and authorization
-CRUD operations for notes
-Technologies
-IaC with Terraform v1.3.9
-CI/CD with GitHub Actions
-AWS cloud and EC2 instance
-Docker-compose
-Fastapi framework
-Postgress db v 14.1
-Installation
-To install this project, follow these steps:
 
-Clone this repository: git clone https://github.com/yourusername/projectname.git
-Change directory to the project folder: cd projectname
-To login to AWS cloud, you need to use the following commands in your Linux terminal: export AWS_ACCESS_KEY_ID=your_access_key and export AWS_SECRET_ACCESS_KEY=your_secret_key
-Run terraform init to initialize Terraform
-Run terraform apply to create the AWS resources
-Run docker-compose up -d to start the containers
-Visit http://ec2-instance-ip:8000/docs to see the API documentation
-Usage
-To use this project, you need to register as a user and log in with your credentials.
+## Features:
 
-You can then create, read, update and delete notes from the web interface or the API endpoints.
+- User authentication and authorization
+- CRUD operations for notes
 
-License
-This project is licensed under the MIT License - see the LICENSE file for details.
 
-Is this better?
+## Tech
+
+Dillinger uses a number of open source projects to work properly:
+
+- [Terraform](https://www.terraform.io/) - Terraform Cloud enables infrastructure automation for provisioning!
+- [Docker-compose](https://docs.docker.com/compose/) - Compose is a tool for defining and running multi-container Docker applications
+- [AWS cloud](https://aws.amazon.com/what-is-aws/) - AWS provides a range of services for cloud computing, data storage, machine learning, security, and more.
+- [Postgres v14.1](https://www.postgresql.org/download/)- Postgres is an open source relational database system that supports SQL and JSON queries. 
+- [Fastapi](https://fastapi.tiangolo.com/) - FastAPI is a modern and fast web framework for building APIs with Python based on standard type hints.
+- [GitHub Actions](https://github.com/features/actions)- GitHub Actions is a CI/CD platform that allows you to automate your software development workflows right in your repository. 
+## Installation
+
+
+Open your favorite Terminal and run these commands.
+
+Login to AWS cloud:
+
+```sh
+export AWS_ACCESS_KEY_ID=
+export AWS_SECRET_ACCESS_KEY=
+```
+
+Terraform commands:
+
+```sh
+terraform init
+```
+
+
+
+```sh
+terraform apply --auto-approve
+```
+Start scypt to add ssl serts:
+```sh
+./init-letsencrypt.sh
+```
