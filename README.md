@@ -46,12 +46,16 @@ To store tfstate on remote s3 bucket unlock that code:
 ```sh
 terraform {
   backend "s3" {
-    bucket = "my-tf-state-bucket-gelding-dev" #aws_s3_bucket.bucket_tf_state.bucket #aws_s3_bucket.bucket_tf_state.id
+    bucket = "my-tf-state-bucket-gelding-dev" #Change bucket name to your actual bucket name. You will see that in outputs.
     key    = "path/to/my/key"
     region = "eu-central-1"
   }
 }
 ```sh
+
+Change harcoded bucket and region.
+
+
 
 Start scypt to add ssl serts:
 ```sh

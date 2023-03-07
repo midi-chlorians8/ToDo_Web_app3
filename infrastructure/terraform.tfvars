@@ -9,5 +9,5 @@ tags = {
   Environment = "dev"
   Project = "todo_web_app3"
   Owner = "You_are"
-  terraform = "True"
+  Terraform = "True"
 }
