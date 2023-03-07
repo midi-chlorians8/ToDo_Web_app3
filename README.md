@@ -41,6 +41,18 @@ terraform init
 ```sh
 terraform apply --auto-approve
 ```
+
+To store tfstate on remote s3 bucket unlock that code:
+```sh
+terraform {
+  backend "s3" {
+    bucket = "my-tf-state-bucket-gelding-dev" #aws_s3_bucket.bucket_tf_state.bucket #aws_s3_bucket.bucket_tf_state.id
+    key    = "path/to/my/key"
+    region = "eu-central-1"
+  }
+}
+```sh
+
 Start scypt to add ssl serts:
 ```sh
 ./init-letsencrypt.sh

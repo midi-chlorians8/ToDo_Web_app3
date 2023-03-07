@@ -1,3 +1,13 @@
+variable "tags" {
+  type = map(string)
+  default = {
+    Environment = "dev"
+    Proj = "todo_web_app3"
+    Owner       = "I_am"
+    terraform   = "True"
+  }
+}
+
 variable "region" {
   description = "Please Enter AWS Region to deploy Server"
   type        = string
@@ -13,7 +23,7 @@ variable "instance_type" {
 variable "allow_ports" {
   description = "List of Ports to open for server"
   type        = list
-  #default     = ["80", "443", "22"]
+  default     = ["80", "443", "22"]
 }
 
 variable "busket_name" {
