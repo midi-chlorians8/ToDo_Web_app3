@@ -60,7 +60,17 @@ Go to AWS -> IAM -> users -> ecr-user
 Open Security credentials tab
 Scroll down to Access keys -> Create access key -> Other
 Save file.
-Add Secret to github action secret store.
+Add Secret to github action secret store. *In the future we check availabilit terraform add secrets to github.
+
+
+
+
+Then we add policy to user ecr user 
+AWSAppRunnerServicePolicyForECRAccess, 
+EC2InstanceProfileForImageBuilderECRContainerBuilds,
+ecretsManagerReadWrite
+* In the future we need to improve that
+
 
 Start scypt to add ssl serts:
 ```sh
