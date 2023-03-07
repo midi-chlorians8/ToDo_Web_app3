@@ -55,6 +55,6 @@ jobs:
           script_stop: true # stop script if any error occurs 
           script_timeout : 60 # timeout after 60 seconds 
           script : |
-            cd /path/to/docker-compose/file # change this to your actual path 
+            cd /home/ubuntu/ToDo_Web_app3/file # change this to your actual path  <cd /path/to/docker-compose/file>
             sed -i "s|image:\s.*|image:\s$ECR_REGISTRY/$ECR_REPOSITORY:$IMAGE_TAG|" docker-compose.yml # replace image tag with new one 
             docker-compose up -d # restart containers with new image 
