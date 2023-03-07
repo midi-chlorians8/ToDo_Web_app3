@@ -55,7 +55,12 @@ terraform {
 
 Change harcoded bucket and region.
 
-
+Next I setup CI/CD creds:
+Go to AWS -> IAM -> users -> ecr-user
+Open Security credentials tab
+Scroll down to Access keys -> Create access key -> Other
+Save file.
+Add Secret to github action secret store.
 
 Start scypt to add ssl serts:
 ```sh
