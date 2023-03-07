@@ -173,3 +173,5 @@ terraform.rc
 Terraform_user_accessKeys.csv
 
 .fuse_*
+
+*.pem
