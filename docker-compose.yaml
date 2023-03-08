@@ -5,7 +5,7 @@ services:
 
   web:
     #build: ./app
-    image: 734075410113.dkr.ecr.eu-central-1.amazonaws.com/fastapi-backend-repository-dev::fb0c67a7cbdea41f1e48c048343f4ec40906ab40 #123456789012.dkr.ecr.us-east-1.amazonaws.com/my-web-app
+    image: 734075410113.dkr.ecr.eu-central-1.amazonaws.com/fastapi-backend-repository-dev:latest
     command: bash -c 'sleep 2;  uvicorn app.main:app --host 0.0.0.0' #bash -c 'while !</dev/tcp/db/5432; do sleep 1; done; uvicorn main:app --host 0.0.0.0'
     volumes:
       - .:/app
