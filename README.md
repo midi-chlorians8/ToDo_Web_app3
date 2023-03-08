@@ -76,3 +76,11 @@ Start scypt to add ssl serts:
 ```sh
 ./init-letsencrypt.sh
 ```
+
+
+
+*notes
+aws ecr get-login-password --region eu-central-1 | docker login --username AWS --password-stdin 734075410113.dkr.ecr.eu-central-1.amazonaws.com
+
+docker pull 734075410113.dkr.ecr.eu-central-1.amazonaws.com/amazonlinux:latest
+docker pull 734075410113.dkr.ecr.eu-central-1.amazonaws.com/fastapi-backend-repository-dev:latest
