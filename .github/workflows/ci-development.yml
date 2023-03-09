@@ -1,4 +1,4 @@
-name: Deploy to ec2 instance
+name: Deploy to ec2 instance dev
 
 on:
   push:
@@ -46,21 +46,24 @@ jobs:
       #     echo $ECR_REGISTRY/$ECR_REPOSITORY:$IMAGE_TAG
       #     docker push $ECR_REGISTRY/$ECR_REPOSITORY:$IMAGE_TAG
       #     docker push $ECR_REGISTRY/$ECR_REPOSITORY:latest
+      - name: Set environment variable
+        run: echo "IMAGE_TAG=$(git rev-parse --short HEAD)" >> $GITHUB_ENV
+
       - name: Build, tag, and push image to Amazon ECR
         env:
           ECR_REGISTRY: ${{ steps.login-ecr.outputs.registry }}
           ECR_REPOSITORY: ${{ secrets.ECR_REPOSITORY }}
-          IMAGE_TAG: ${{ github.sha }}
+          # IMAGE_TAG: ${{ github.sha }}
         run: |
           docker build -t $ECR_REGISTRY/$ECR_REPOSITORY:$IMAGE_TAG ./app
-          docker tag $ECR_REGISTRY/$ECR_REPOSITORY:$IMAGE_TAG $ECR_REGISTRY/$ECR_REPOSITORY:latest
           docker push $ECR_REGISTRY/$ECR_REPOSITORY:$IMAGE_TAG
-          docker push $ECR_REGISTRY/$ECR_REPOSITORY:latest
+
+          # docker tag $ECR_REGISTRY/$ECR_REPOSITORY:$IMAGE_TAG $ECR_REGISTRY/$ECR_REPOSITORY:latest
+          # docker push $ECR_REGISTRY/$ECR_REPOSITORY:latest
 
 
 
-      - name: Set environment variable
-        run: echo "IMAGE_TAG=$(git rev-parse --short HEAD)" >> $GITHUB_ENV
+
 
       - name: SSH into instance and update docker-compose file
         uses: appleboy/ssh-action@master
