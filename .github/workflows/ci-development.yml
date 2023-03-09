@@ -59,7 +59,8 @@ jobs:
 
 
 
-
+      - name: Set environment variable
+        run: echo "IMAGE_TAG=$(git rev-parse --short HEAD)" >> $GITHUB_ENV
 
       - name: SSH into instance and update docker-compose file
         uses: appleboy/ssh-action@master
