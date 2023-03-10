@@ -73,10 +73,10 @@ jobs:
             if [ -d "ToDo_Web_app3" ]; then
               cd ./ToDo_Web_app3
               # docker-compose down --rmi all
-              
+
               docker-compose stop web
               docker-compose rm web
-              docker rmi $(docker images -q)
+              #docker rmi $(docker images -q)
 
               cd ..
               sudo rm -r ToDo_Web_app3
