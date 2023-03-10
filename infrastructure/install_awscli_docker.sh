@@ -22,9 +22,10 @@ sudo pip3 install docker-compose
 
 
 cd /home/ubuntu
+chown ubuntu /home/ubuntu/ToDo_Web_app3
+touch IamHer
 git clone https://github.com/midi-chlorians8/ToDo_Web_app3.git
 
 cd ToDo_Web_app3/
 chmod +x /home/ubuntu/init-letsencrypt.sh
 
-chown ubuntu /home/ubuntu/ToDo_Web_app3
