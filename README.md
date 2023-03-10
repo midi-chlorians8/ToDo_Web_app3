@@ -70,9 +70,11 @@ Change harcoded bucket and region. (new bucket name will be in outputs)
 ```sh
 terraform init -migrate-state
 ```
-I go to the server and manually 
+I go to the server and manually *Check. I added that step in init scypt. Maybe manual don't need to do that.
 sudo chown ubuntu ToDo_Web_app3/
 
+Manual go to the instance and connect to ECR. *It can be automated in terraform.
+aws ecr get-login-password --region eu-central-1 | docker login --username AWS --password-stdin 734075410113.dkr.ecr.eu-central-1.amazonaws.com
 
 Next I setup CI/CD creds:
 Go to AWS -> IAM -> users -> ecr-user
