@@ -80,7 +80,15 @@ Start scypt to add ssl serts:
 ./init-letsencrypt.sh
 ```
 
-
+To setup CI/CD we need to add secret vars:
+AWS_ACCESS_KEY_ID
+AWS_SECRET_ACCESS_KEY
+AWS_REGION
+ECR_REPOSITORY
+INSTANCE_HOST
+INSTANCE_KEY
+INSTANCE_USER
+That vars uses in our github action pipeline
 ![image](https://user-images.githubusercontent.com/50805334/224275693-42f42348-d12f-459b-b8a5-8d67ecbfe11d.png)
 
 *notes
