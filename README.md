@@ -73,7 +73,6 @@ ecretsManagerReadWrite
 
 
 
-![image](https://user-images.githubusercontent.com/50805334/224275693-42f42348-d12f-459b-b8a5-8d67ecbfe11d.png)
 
 
 Start scypt to add ssl serts:
@@ -82,6 +81,7 @@ Start scypt to add ssl serts:
 ```
 
 
+![image](https://user-images.githubusercontent.com/50805334/224275693-42f42348-d12f-459b-b8a5-8d67ecbfe11d.png)
 
 *notes
 aws ecr get-login-password --region eu-central-1 | docker login --username AWS --password-stdin 734075410113.dkr.ecr.eu-central-1.amazonaws.com
