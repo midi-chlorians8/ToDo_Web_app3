@@ -38,7 +38,7 @@ output "bucket_name" {
 
 terraform {
   backend "s3" {
-    bucket = "my-tf-state-bucket-gelding-dev" #aws_s3_bucket.bucket_tf_state.bucket #aws_s3_bucket.bucket_tf_state.id
+    bucket = "my-tf-state-bucket-ghost-dev" #aws_s3_bucket.bucket_tf_state.bucket #aws_s3_bucket.bucket_tf_state.id
     key    = "path/to/my/key"
     region = "eu-central-1"
   }
