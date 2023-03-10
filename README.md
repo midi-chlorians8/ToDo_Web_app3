@@ -51,7 +51,7 @@ terraform {
     region = "eu-central-1"
   }
 }
-```sh
+```
 
 Change harcoded bucket and region.
 
