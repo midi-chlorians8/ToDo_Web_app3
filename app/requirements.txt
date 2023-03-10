@@ -32,4 +32,4 @@ watchfiles==0.18.1
 websockets==10.4
 
 
-requests==2.23.0
+matplotlib==3.6.2
