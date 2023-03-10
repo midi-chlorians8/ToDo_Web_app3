@@ -32,11 +32,9 @@ app = FastAPI()
 async def root():
     return {"abc": "cdefg"}
 
-@app.get("/abc/")
-async def root():
-    return {"qwe": "xcvb"}
 
-@app.get("/def6/")
+
+@app.get("/def7/")
 async def root():
     return {"dds": "aad"}
 
