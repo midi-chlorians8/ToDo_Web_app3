@@ -36,7 +36,7 @@ async def root():
 async def root():
     return {"qwe": "xcvb"}
 
-@app.get("/def5/")
+@app.get("/def6/")
 async def root():
     return {"dds": "aad"}
 
