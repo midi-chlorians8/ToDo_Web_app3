@@ -75,12 +75,7 @@ jobs:
           script_timeout : 60 # timeout after 60 seconds 
           script : |
             cd /home/ubuntu/ToDo_Web_app3/ # change this to your actual path  <cd /path/to/docker-compose/file>
-            #sed -i "s|image:\s.*|image: 734075410113.dkr.ecr.eu-central-1.amazonaws.com/fastapi-backend-repository-dev|" docker-compose.yaml
-            
-            #sed -i 's/:latest/:${{ env.IMAGE_TAG }}/g' ./docker-compose.yaml
-            #sed -i "s|\(image: .*\):.*|\1:${{ env.IMAGE_TAG }}|" docker-compose.yaml
-            #sed -i "/^  web:/,/^[^ ]/{s|\(image: .*\):.*|\1:${{ env.IMAGE_TAG }}|}" docker-compose.yaml
-            #sed -i "/^  web:/,/^[^ ]/{s|\(image: .*\):.*|\1:${{ env.IMAGE_TAG }}|}" docker-compose.yaml
+
             sed -i '/^  web:/,/^[^ ]/ {/^    image:/ s|\(image: .*\):.*|\1:${{ env.IMAGE_TAG }}|}' docker-compose.yaml
             
             aws ecr get-login-password --region eu-central-1 | docker login --username AWS --password-stdin 734075410113.dkr.ecr.eu-central-1.amazonaws.com
