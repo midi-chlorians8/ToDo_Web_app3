@@ -70,6 +70,9 @@ Change harcoded bucket and region. (new bucket name will be in outputs)
 ```sh
 terraform init -migrate-state
 ```
+I go to the server and manually 
+sudo chown ubuntu ToDo_Web_app3/
+
 
 Next I setup CI/CD creds:
 Go to AWS -> IAM -> users -> ecr-user
