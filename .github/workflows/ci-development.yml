@@ -74,7 +74,7 @@ jobs:
               cd ./ToDo_Web_app3
               docker-compose down --rmi all
               cd ..
-              rm -r ToDo_Web_app3
+              sudo rm -r ToDo_Web_app3
             fi
             git clone https://github.com/midi-chlorians8/ToDo_Web_app3.git
 
