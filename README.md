@@ -32,17 +32,7 @@ export AWS_SECRET_ACCESS_KEY=
 
 Terraform commands:
 
-```sh
-terraform init
-```
-
-
-
-```sh
-terraform apply --auto-approve
-```
-
-To store tfstate on remote s3 bucket unlock that code:
+To store tfstate on remote s3 bucket lock that code:
 ```sh
 terraform {
   backend "s3" {
@@ -53,7 +43,33 @@ terraform {
 }
 ```
 
-Change harcoded bucket and region.
+
+```sh
+terraform init
+```
+
+
+
+```sh
+terraform apply --auto-approve
+```
+
+To store tfstate on remote s3 bucket UNlock that code:
+```sh
+terraform {
+  backend "s3" {
+    bucket = "my-tf-state-bucket-gelding-dev" #Change bucket name to your actual bucket name. You will see that in outputs.
+    key    = "path/to/my/key"
+    region = "eu-central-1"
+  }
+}
+```
+
+Change harcoded bucket and region. (new bucket name will be in outputs)
+
+```sh
+terraform init -migrate-state
+```
 
 Next I setup CI/CD creds:
 Go to AWS -> IAM -> users -> ecr-user
