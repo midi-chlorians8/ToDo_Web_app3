@@ -93,3 +93,7 @@ Start scypt to add ssl serts:
 That vars uses in our github action pipeline
 ![image](https://user-images.githubusercontent.com/50805334/224275693-42f42348-d12f-459b-b8a5-8d67ecbfe11d.png)
 
+
+To delete all:
+we need to do some steps manually
+1) Delete ECR registry: aws ecr delete-repository --repository-name fastapi-backend-repository-dev --force --region eu-central-1
