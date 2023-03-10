@@ -62,9 +62,6 @@ jobs:
           # docker push $ECR_REGISTRY/$ECR_REPOSITORY:latest
 
 
-
-
-
       - name: SSH into instance and update docker-compose file
         uses: appleboy/ssh-action@master
         with:
@@ -79,6 +76,6 @@ jobs:
             #sed -i '/^  web:/,/^[^ ]/ {/^    image:/ s|\(image: .*\):.*|\1:${{ env.IMAGE_TAG }}|}' docker-compose.yaml
             #awk '/^  web:/,/^[^ ]/ {if (/^    image:/) {sub(/:.*/, ":${{ env.IMAGE_TAG }}")} }1' docker-compose.yaml > tmp && mv tmp docker-compose.yaml
             perl -i -pe 'if (/^  web:/../^[^ ]/) { s/(image:.*):.*/$1:${{ env.IMAGE_TAG }}/ if /^    image:/ }' docker-compose.yaml
-            aws ecr get-login-password --region eu-central-1 | docker login --username AWS --password-stdin 734075410113.dkr.ecr.eu-central-1.amazonaws.com
             
+            aws ecr get-login-password --region eu-central-1 | docker login --username AWS --password-stdin 734075410113.dkr.ecr.eu-central-1.amazonaws.com         
             docker-compose up -d # restart containers with new image 
