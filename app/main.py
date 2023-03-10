@@ -34,7 +34,7 @@ async def root():
 
 
 
-@app.get("/def7/")
+@app.get("/def8/")
 async def root():
     return {"dds": "aad"}
 
