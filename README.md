@@ -72,6 +72,10 @@ ecretsManagerReadWrite
 * In the future we need to improve that
 
 
+
+![image](https://user-images.githubusercontent.com/50805334/224275693-42f42348-d12f-459b-b8a5-8d67ecbfe11d.png)
+
+
 Start scypt to add ssl serts:
 ```sh
 ./init-letsencrypt.sh
