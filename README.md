@@ -6,6 +6,7 @@
 
 - User authentication and authorization
 - CRUD operations for notes
+![image](https://user-images.githubusercontent.com/50805334/224386102-cf2068b0-e8e7-4655-9bac-bec84355319e.png)
 
 
 ## Tech
